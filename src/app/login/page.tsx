@@ -1,3 +1,4 @@
+"use client";
 import { LoginButton, LogoutButton } from "../../components/buttons";
 
 export default async function Login() {

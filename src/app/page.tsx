@@ -10,7 +10,7 @@ export default function Home() {
         <Link href="/github">GitHubのGraphQL APIを試す</Link>
       </div>
       <div>
-        <Link href="/NextAuth">NextAuthを試す</Link>
+        <Link href="/login">NextAuthを試す</Link>
       </div>
     </>
   );
