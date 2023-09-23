@@ -1,7 +1,11 @@
 "use client";
-import { LoginButton, LogoutButton } from "../../components/buttons";
 
-export default async function Login() {
+import { LoginButton, LogoutButton } from "../../components/buttons";
+import { useSession } from "next-auth/react";
+
+export default function Login() {
+  const { data: session } = useSession();
+  const user = session?.user;
   return (
     <main
       style={{
@@ -12,8 +16,8 @@ export default async function Login() {
       }}
     >
       <div>
-        <LoginButton />
-        <LogoutButton />
+        {user ? <div>{user.name}さんがログインしました</div> : null}
+        {user ? <LogoutButton /> : <LoginButton />}
       </div>
     </main>
   );
