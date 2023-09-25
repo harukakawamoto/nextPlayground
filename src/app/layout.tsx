@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Header } from "@/components/header/View";
+import { Header } from "@/components/header/page";
 import { Inter } from "next/font/google";
 import { NextAuthProvider } from "@/provider/AuthProvider";
 import { ApolloProviderWrapper } from "../provider/ApolloProvider";

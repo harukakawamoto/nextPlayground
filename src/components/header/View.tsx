@@ -1,5 +1,18 @@
 import Link from "next/link";
-export const Header = () => {
+import { Session } from "next-auth";
+
+export type Props = {
+  session?: Session | null;
+  user?:
+    | {
+        name?: string | null | undefined;
+        email?: string | null | undefined;
+        image?: string | null | undefined;
+      }
+    | undefined;
+};
+
+export const View: React.FC<Props> = (props) => {
   return (
     <header>
       <h1>

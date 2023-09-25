@@ -8,7 +8,7 @@ export async function GET() {
   const session = await getServerSession(options);
 
   // ユーザー情報取得
-  console.log("in GET", session?.user);
+  //   console.log("in GET", session?.user);
 
   return NextResponse.json({ message: "ok" });
 }
