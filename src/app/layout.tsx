@@ -4,6 +4,7 @@ import { Header } from "@/components/header/page";
 import { Inter } from "next/font/google";
 import { NextAuthProvider } from "@/provider/AuthProvider";
 import { ApolloProviderWrapper } from "../provider/ApolloProvider";
+import { useSession } from "next-auth/react";
 
 const inter = Inter({ subsets: ["latin"] });
 

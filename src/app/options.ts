@@ -16,7 +16,7 @@ export const options: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    jwt: async ({ token, user, account, profile, isNewUser }) => {
+    jwt: async ({ token, user, account }) => {
       if (user) {
         token.user = user;
         const u = user as any;
@@ -34,6 +34,7 @@ export const options: NextAuthOptions = {
         user: {
           ...session.user,
           role: token.role,
+          accessToken: token.accessToken,
         },
       };
     },
